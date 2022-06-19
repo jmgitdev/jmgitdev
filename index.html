@@ -7,39 +7,13 @@
         "width=device-width, initial-scale=1.0">
   
     <title>Speech to Text</title>
+    <script src="./speech-recognizer.js"></script>
 </head>
   
 <body>
     <div class="words" contenteditable>
         <p id="p"></p>
     </div>
-  
-    <script>
-        // new speech recognition object
-        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
-        var recognition = new SpeechRecognition();
-
-        // This runs when the speech recognition service starts
-        recognition.onstart = function() {
-            console.log("We are listening. Try speaking into the microphone.");
-        };
-
-        recognition.onspeechend = function() {
-            // when user is done speaking
-            recognition.stop();
-        }
-
-        // This runs when the speech recognition service returns result
-        recognition.onresult = function(event) {
-            var transcript = event.results[0][0].transcript;
-            var confidence = event.results[0][0].confidence;
-            console.log("transcript : ", transcript);
-            console.log("confidence : ", confidence);
-        };
-
-        // start recognition
-        recognition.start();
-    </script>
 </body>
   
 </html>
