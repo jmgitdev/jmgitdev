@@ -44,10 +44,6 @@ if ("webkitSpeechRecognition" in window) {
      speech_recognizer.stop();
   };
   
-  //document.getElementById("hablar_btn").onclick = () => {
-    //speech_recognizer.start();
-  //};
-  
   window.onkeypress = function()
   {
     console.log("Key pressed");
