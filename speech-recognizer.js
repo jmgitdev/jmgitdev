@@ -48,6 +48,11 @@ if ("webkitSpeechRecognition" in window) {
     speech_recognizer.start();
   };
   
+  window.onkeypress = function()
+  {
+    console.log("Key pressed");
+  };
+  
 } else {
   console.log("Speech Recognition Not Available")
 }
