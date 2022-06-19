@@ -3,7 +3,7 @@ if ("webkitSpeechRecognition" in window) {
   console.log("Speech Recognition available")
   let speech_recognizer = new webkitSpeechRecognition();
   
-  speech_recognizer.continuous = true;
+  speech_recognizer.continuous = false;
   
   speech_recognizer.interimResults = true;
   
@@ -19,6 +19,7 @@ if ("webkitSpeechRecognition" in window) {
     console.log("Finalizado.");
   };
   
+  let final_transcript = "";
   
   speech_recognizer.onresult = (event) => 
   {
