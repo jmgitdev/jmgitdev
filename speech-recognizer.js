@@ -38,7 +38,14 @@ if ("webkitSpeechRecognition" in window) {
     console.log(final_transcript);
   };
   
-  speech_recognizer.start();
+  document.querySelector("#hablar_btn").onclick = () => {
+    speechRecognition.start();
+  };
+  
+  document.querySelector("#parar_btn").onclick = () => {
+    speechRecognition.stop();
+  };
+  
 } else {
   console.log("Speech Recognition Not Available")
 }
