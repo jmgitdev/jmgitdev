@@ -38,7 +38,7 @@ if ("webkitSpeechRecognition" in window) {
     console.log(final_transcript);
   };
   
-
+  speech_recognizer.start();
 } else {
   console.log("Speech Recognition Not Available")
 }
