@@ -39,11 +39,11 @@ if ("webkitSpeechRecognition" in window) {
     console.log(final_transcript);
   };
   
-  document.querySelector("#hablar_btn").onclick = () => {
+  document.getElementById("hablar_btn").onclick = () => {
     speech_recognizer.start();
   };
   
-  document.querySelector("#parar_btn").onclick = () => {
+  document.getElementById("parar_btn").onclick = () => {
     speech_recognizer.stop();
   };
   
