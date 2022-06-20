@@ -12,6 +12,7 @@
       <script src="./speech-recognizer.js"></script>
       <script>
       document.getElementById("quien-btn").onclick = () =>{
+        console.log("Quien");
         fetch('http://bots-test.ddns.net:6330/sendmsg/{"msgIndex":0,"reply":"This is a test"}')
           .then(response => response.text())
           .then(data => console.log(data));
