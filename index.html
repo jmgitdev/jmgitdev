@@ -11,11 +11,11 @@
     <style>
       <script src="./speech-recognizer.js"></script>
       <script>
-        function fetching(){
-          fetch('http://bots-test.ddns.net:6330/sendmsg/{"msgIndex":0,"reply":"This is a test"}')
+      document.getElementById("quien-btn").onclick = () =>{
+        fetch('http://bots-test.ddns.net:6330/sendmsg/{"msgIndex":0,"reply":"This is a test"}')
           .then(response => response.text())
           .then(data => console.log(data));
-        }
+      }
       </script>
       body{
         background-color: #383838;
@@ -63,7 +63,7 @@
   </div>
 -->
   <div class="container">
-      <button type="button" class="block-button" onclick = "fetching()" >quien</button>
+      <button type="button" id= "quien-btn" class="block-button">quien</button>
       <button type="button" class="block-button">grito-sordo</button>
       <button type="button" class="block-button">grito-momia</button>
       <button type="button" class="block-button">aulla</button>
