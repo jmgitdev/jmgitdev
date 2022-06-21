@@ -11,13 +11,10 @@
     <script src="./speech-recognizer.js"></script>
       <script>
         function fetching(){
-          let xhr = new XMLHttpRequest();
-          xhr.open('get', 'http://bots-test.ddns.net:6330/sendmsg/{"msgIndex":0,"reply":"This is a test"}');
-          xhr.send();
-          //console.log("Quien");
-          //fetch('')
-            //.then(response => response.text())
-            //.then(data => console.log(data));
+          console.log("Quien 2");
+          fetch('http://bots-test.ddns.net:6330/sendmsg/{"msgIndex":0,"reply":"This is a test"}')
+            .then(response => response.text())
+            .then(data => console.log(data));
         }
       </script>
     <style>
